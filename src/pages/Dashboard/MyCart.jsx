@@ -19,6 +19,7 @@ const MyCart = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
+      console.log(item._id);
       if (result.isConfirmed) {
         fetch(`http://localhost:5000/carts/${item._id}`, {
           method: "DELETE",
